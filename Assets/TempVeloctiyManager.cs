@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TempVeloctiyManager : MonoBehaviour
 {
+    [SerializeField]
+    private int _speed;
     Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
@@ -11,7 +13,7 @@ public class TempVeloctiyManager : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         if(_rb != null)
         {
-            _rb.velocity = Vector3.forward;
+            _rb.velocity = Vector3.forward * _speed;
         }
     }
 
