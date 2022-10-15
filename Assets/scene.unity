@@ -256,8 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7dca0c382d83c4094f4b7f7da20d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pullRadiusFromCenter: 200
-  _pullForce: 4
+  _gravitationalConstant: 10
 --- !u!1 &1543285737
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +509,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9159231838472355532, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: -9159231838472355532, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
         type: 3}
       propertyPath: m_IsKinematic
