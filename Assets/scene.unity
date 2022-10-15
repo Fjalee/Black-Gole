@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7dca0c382d83c4094f4b7f7da20d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pullRadiusFromCenter: 20
+  _pullRadiusFromCenter: 200
   _pullForce: 4
 --- !u!1 &1543285737
 GameObject:
@@ -390,7 +390,6 @@ GameObject:
   - component: {fileID: 1842948771}
   - component: {fileID: 1842948770}
   - component: {fileID: 1842948769}
-  - component: {fileID: 1842948768}
   m_Layer: 0
   m_Name: TempBall
   m_TagString: Untagged
@@ -398,19 +397,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1842948768
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842948767}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1842948769
 Rigidbody:
   m_ObjectHideFlags: 0
