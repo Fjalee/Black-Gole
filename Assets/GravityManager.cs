@@ -26,11 +26,16 @@ public class GravityManager : MonoBehaviour
 
     public void FixedUpdate()
     {
+        ApplyForceToObjectsAround();
+    }
+
+    private void ApplyForceToObjectsAround()
+    {
         var collidersInsidePullRadius = Physics.OverlapSphere(transform.position, _pullRadiusFromCenter);
         foreach (var pulledCollider in collidersInsidePullRadius)
         {
             // OverlapSphere has this object in the list. Skip it.
-            if(gameObject.GetComponent<Collider>() == pulledCollider)
+            if (gameObject.GetComponent<Collider>() == pulledCollider)
             {
                 continue;
             }
