@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402188, g: 0.4931649, b: 0.57223135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,25 +238,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &709556651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4852334718845088905, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-    type: 3}
-  m_PrefabInstance: {fileID: 4852334719356144738}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &709556657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709556651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7dca0c382d83c4094f4b7f7da20d04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gravitationalConstant: 10
 --- !u!1 &1543285737
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,16 +491,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -9159231838472355532, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-        type: 3}
-      propertyPath: m_Mass
-      value: 20000
-      objectReference: {fileID: 0}
-    - target: {fileID: -9159231838472355532, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4852334718845088905, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
         type: 3}
       propertyPath: m_Name
@@ -529,21 +500,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852334718845088909, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852334718845088909, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852334718845088909, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4852334718845088909, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
         type: 3}

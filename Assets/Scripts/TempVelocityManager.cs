@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempVeloctiyManager : MonoBehaviour
+public class TempVelocityManager : MonoBehaviour
 {
     [SerializeField]
     private int _speed;
@@ -11,7 +11,7 @@ public class TempVeloctiyManager : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        if(_rb != null)
+        if (_rb != null)
         {
             _rb.velocity = Vector3.forward * _speed;
         }
@@ -20,6 +20,6 @@ public class TempVeloctiyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
