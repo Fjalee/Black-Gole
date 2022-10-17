@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _planet: {fileID: 1842948769}
   _rotationSpeedX: 0.5
-  _rotationSpeedY: 0.1
+  _rotationSpeedY: 0.5
   _shootPower: 15
 --- !u!4 &570130047
 Transform:
