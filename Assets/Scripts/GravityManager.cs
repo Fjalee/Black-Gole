@@ -10,36 +10,18 @@ public class GravityManager : MonoBehaviour
 
     [SerializeField]
     private float _gravitationalConstant;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    private int _gravityAffectedMask = (1 << 6); // 6th layer is GravityAffected
 
     public void FixedUpdate()
     {
-        ApplyForceToObjectsAround();
+        ApplyGravityToObjectsAround();
     }
 
-    private void ApplyForceToObjectsAround()
+    private void ApplyGravityToObjectsAround()
     {
-        var collidersInsidePullRadius = Physics.OverlapSphere(transform.position, _pullRadiusFromCenter);
+        var collidersInsidePullRadius = Physics.OverlapSphere(transform.position, _pullRadiusFromCenter, _gravityAffectedMask);
         foreach (var pulledCollider in collidersInsidePullRadius)
         {
-            // OverlapSphere has this object in the list. Skip it.
-            if (gameObject.GetComponent<Collider>() == pulledCollider)
-            {
-                continue;
-            }
-
             // calculate direction from target to me
             var forceDirection = transform.position - pulledCollider.transform.position;
 
