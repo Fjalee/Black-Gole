@@ -30,7 +30,7 @@ public class ControlPoint : MonoBehaviour
 
     public void ReceiveTouchInput(Vector2 moveInput)
     {
-        _rotation.x += moveInput.x * _rotationSpeedX;
+        _rotation.x += -moveInput.x * _rotationSpeedX;
         _rotation.y += moveInput.y * _rotationSpeedY;
         transform.rotation = Quaternion.Euler(_rotation.y, _rotation.x, 0f);
     }
