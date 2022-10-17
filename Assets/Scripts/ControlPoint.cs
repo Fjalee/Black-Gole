@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ControlPoint : MonoBehaviour
 {
-    private float _xRotation, _yRotation = 0;
+    private Vector2 _rotation = Vector2.zero;
 
-    private bool _isPlanetLaunched = false;
+    private bool _isPlanetLaunched;
 
     [SerializeField]
     private Rigidbody _planet;
@@ -23,21 +21,28 @@ public class ControlPoint : MonoBehaviour
     void Update()
     {
         transform.position = _planet.position;
+
+        if (!_isPlanetLaunched)
+        {
+            _planet.velocity = Vector3.zero;
+        }
     }
 
     public void ReceiveTouchInput(Vector2 moveInput)
     {
-        _xRotation += moveInput.x * _rotationSpeedX;
-        _yRotation += moveInput.y * _rotationSpeedY;
-        transform.rotation = Quaternion.Euler(_yRotation, _xRotation, 0f);
+        _rotation.x += moveInput.x * _rotationSpeedX;
+        _rotation.y += moveInput.y * _rotationSpeedY;
+        transform.rotation = Quaternion.Euler(_rotation.y, _rotation.x, 0f);
     }
 
     public void ShootPlanet()
     {
-        if (!_isPlanetLaunched)
+        if (_isPlanetLaunched)
         {
-            _planet.velocity = transform.forward * _shootPower;
-            _isPlanetLaunched = true;
+            return;
         }
+
+        _planet.velocity = transform.forward * _shootPower;
+        _isPlanetLaunched = true;
     }
 }

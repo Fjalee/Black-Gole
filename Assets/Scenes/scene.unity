@@ -695,7 +695,7 @@ PrefabInstance:
     - target: {fileID: 709556657, guid: bf1c5dbf753f33f4e8c1cb7edc129252, type: 3}
       propertyPath: _planet
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1381457484}
     - target: {fileID: 4852334718845088905, guid: bf1c5dbf753f33f4e8c1cb7edc129252,
         type: 3}
       propertyPath: m_Name
