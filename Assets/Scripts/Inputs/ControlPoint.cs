@@ -20,6 +20,11 @@ public class ControlPoint : MonoBehaviour
 
     void Update()
     {
+        if(_planet == null)
+        {
+            return;
+        }
+
         transform.position = _planet.position;
 
         if (!_isPlanetLaunched)
