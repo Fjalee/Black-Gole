@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Star
+  m_Name: Star
   m_Shader: {fileID: -6465566751694194690, guid: 86773ef174781c049aaa658afc4a0657,
     type: 3}
   m_ValidKeywords: []
