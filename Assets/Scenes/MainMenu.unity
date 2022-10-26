@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d78366118ec7714ea5a2214ef3fad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _xSpeed: 0.003
-  _ySpeed: 0.005
-  _zSpeed: 0.009
+  _xSpeed: 0.0038
+  _ySpeed: 0.0325
+  _zSpeed: 0.0389
 --- !u!224 &652166594 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
