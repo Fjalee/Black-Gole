@@ -546,36 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1303025471}
     m_Modifications:
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_Pivot.x
@@ -614,12 +584,12 @@ PrefabInstance:
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
@@ -664,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -120
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
@@ -688,13 +658,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
-      propertyPath: m_text
-      value: How to
+      propertyPath: m_fontSize
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
-      propertyPath: m_fontSize
-      value: 50
+      propertyPath: m_fontSizeMax
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_charWidthMaxAdj
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de788e9dfccb7ab4eaea0f4d483c2e88, type: 3}
@@ -819,12 +799,12 @@ PrefabInstance:
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
@@ -890,6 +870,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_text
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358716819435425, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de788e9dfccb7ab4eaea0f4d483c2e88, type: 3}
