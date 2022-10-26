@@ -546,6 +546,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1303025471}
     m_Modifications:
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_Pivot.x
