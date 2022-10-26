@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _planet: {fileID: 0}
-  _rotationSpeed: 0.000005
+  _rotationSpeed: 0.00008
   _shootPower: 15
 --- !u!114 &471496698320342022
 MonoBehaviour:

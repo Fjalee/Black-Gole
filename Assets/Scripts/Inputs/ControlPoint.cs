@@ -10,7 +10,7 @@ public class ControlPoint : MonoBehaviour
     private Rigidbody _planet;
 
     [SerializeField]
-    private float _rotationSpeed = 0.005f;
+    private float _rotationSpeed = 0.00008f;
 
     [SerializeField]
     private float _shootPower = 15f;
