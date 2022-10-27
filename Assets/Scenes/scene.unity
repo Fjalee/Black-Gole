@@ -325,6 +325,11 @@ PrefabInstance:
       propertyPath: _planet
       value: 
       objectReference: {fileID: 1842948769}
+    - target: {fileID: 471496698320342264, guid: 757bb985194c2c243bccc0b76303b889,
+        type: 3}
+      propertyPath: _rotationSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 471496698320342265, guid: 757bb985194c2c243bccc0b76303b889,
         type: 3}
       propertyPath: m_RootOrder

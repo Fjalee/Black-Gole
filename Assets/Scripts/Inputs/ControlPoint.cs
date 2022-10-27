@@ -10,10 +10,20 @@ public class ControlPoint : MonoBehaviour
     private Rigidbody _planet;
 
     [SerializeField]
-    private float _rotationSpeed = 0.00008f;
-
+    private float _rotationSpeed = 8f;
     [SerializeField]
     private float _shootPower = 15f;
+
+    private int _smallestScreenDim;
+
+    private void Start()
+    {
+        _rotationSpeed = _rotationSpeed / 100000;
+
+        _smallestScreenDim = Screen.currentResolution.height < Screen.currentResolution.width
+            ? Screen.currentResolution.height
+            : Screen.currentResolution.width;
+    }
 
     void Update()
     {
@@ -32,11 +42,8 @@ public class ControlPoint : MonoBehaviour
 
     public void ReceiveTouchInput(Vector2 moveInput)
     {
-        var smallestScreenDim = Screen.currentResolution.height < Screen.currentResolution.width
-            ? Screen.currentResolution.height
-            : Screen.currentResolution.width;
-        _rotation.x += -moveInput.x * _rotationSpeed * smallestScreenDim;
-        _rotation.y += moveInput.y * _rotationSpeed * smallestScreenDim;
+        _rotation.x += -moveInput.x * _rotationSpeed * _smallestScreenDim;
+        _rotation.y += moveInput.y * _rotationSpeed * _smallestScreenDim;
         transform.rotation = Quaternion.Euler(_rotation.y, _rotation.x, 0f);
     }
 
