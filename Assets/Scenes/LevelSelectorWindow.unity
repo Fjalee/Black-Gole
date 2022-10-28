@@ -366,6 +366,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147928903}
     m_Modifications:
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 174412619}
     - target: {fileID: 4766358715274316457, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_Pivot.x
@@ -475,16 +480,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
-        type: 3}
-      propertyPath: m_text
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 103.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e14c0e7b81e23f46bc2c8fd108a2684, type: 3}
@@ -1044,6 +1039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147928903}
   - component: {fileID: 1147928904}
+  - component: {fileID: 1147928905}
   m_Layer: 5
   m_Name: LevelSelectionGrid
   m_TagString: Untagged
@@ -1105,6 +1101,20 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 100}
   m_Constraint: 1
   m_ConstraintCount: 2
+--- !u!114 &1147928905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147928902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ab707cfd23dd04389cb9dd61fbcccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _disabledButtonsIndexFromZero: 
+  _hideButtonsIndexFromZero: 09000000080000000700000006000000050000000400000003000000
 --- !u!1001 &1168544085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1609,14 +1619,12 @@ PrefabInstance:
     - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_text
-      value: '6
-
-'
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_fontSize
-      value: 120
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e14c0e7b81e23f46bc2c8fd108a2684, type: 3}
@@ -1949,9 +1957,7 @@ PrefabInstance:
     - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_text
-      value: '5
-
-'
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4766358716819435425, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
