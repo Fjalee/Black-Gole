@@ -8,8 +8,8 @@ public class BallHit : MonoBehaviour
     {
         if (other.gameObject.tag == "PlanetBall")
         {
-            Debug.Log("consume ball");
             Destroy(other.gameObject);
+            SceneLoader.Reload();
         }
     }
 }
