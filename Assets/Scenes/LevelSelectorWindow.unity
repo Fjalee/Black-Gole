@@ -368,9 +368,34 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 174412619}
+      objectReference: {fileID: 1147928905}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelSelectionHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_Pivot.x
@@ -631,6 +656,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147928903}
     m_Modifications:
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1147928905}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelSelectionHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1709,6 +1764,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147928903}
     m_Modifications:
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1147928905}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelSelectionHandle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766358715274316456, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316457, guid: 6e14c0e7b81e23f46bc2c8fd108a2684,
         type: 3}
       propertyPath: m_Pivot.x

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSelectionHandle : MonoBehaviour
@@ -38,5 +39,10 @@ public class LevelSelectionHandle : MonoBehaviour
                 buttons[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void OpenLevel(int indexFromOne)
+    {
+        SceneManager.LoadScene("Level" + indexFromOne);
     }
 }
