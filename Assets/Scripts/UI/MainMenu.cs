@@ -5,6 +5,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("LevelSelectorWindow");
+        SceneLoader.LoadHeavy(SceneLoader.Scene.LevelSelectorWindow);
     }
 }
