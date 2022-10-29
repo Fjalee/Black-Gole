@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LoaderCallback : MonoBehaviour
 {
-    private bool IsFirstUpdate = true;
+    private bool _isFirstUpdate = true;
 
     private void Update()
     {
-        if (IsFirstUpdate)
+        if (_isFirstUpdate)
         {
-            IsFirstUpdate = false;
+            _isFirstUpdate = false;
             SceneLoader.LoaderCallback();
         }
     }

@@ -13,17 +13,18 @@ public static class SceneLoader
         Level1,
     }
 
-    private static Action onLoaderCallback;
+    private static Action _onLoaderCallback;
 
     public static void LoadHeavy(Scene scene)
     {
-        onLoaderCallback = () =>
+        _onLoaderCallback = () =>
         {
             SceneManager.LoadScene(scene.ToString());
         };
 
         SceneManager.LoadScene(SceneLoader.Scene.Loading.ToString());
     }
+
     public static void Load(Scene scene)
     {
         SceneManager.LoadScene(scene.ToString());
@@ -31,10 +32,10 @@ public static class SceneLoader
 
     public static void LoaderCallback()
     {
-        if (onLoaderCallback != null)
+        if (_onLoaderCallback != null)
         {
-            onLoaderCallback();
-            onLoaderCallback = null;
+            _onLoaderCallback();
+            _onLoaderCallback = null;
         }
     }
 
