@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void SelectLevel()
     {
-        SceneLoader.LoadHeavy(SceneLoader.Scene.Level1); //temp change to level selection later
+        SceneLoader.Load(SceneLoader.Scene.LevelSelectorWindow);
     }
 }

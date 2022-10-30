@@ -8,9 +8,12 @@ public static class SceneLoader
 {
     public enum Scene
     {
-        MainMenu,
         Loading,
         Level1,
+        Level2,
+        Level3,
+        MainMenu,
+        LevelSelectorWindow,
     }
 
     private static Action _onLoaderCallback;

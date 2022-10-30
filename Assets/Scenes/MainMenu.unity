@@ -818,7 +818,7 @@ PrefabInstance:
     - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayGame
+      value: SelectLevel
       objectReference: {fileID: 0}
     - target: {fileID: 4766358715274316456, guid: de788e9dfccb7ab4eaea0f4d483c2e88,
         type: 3}
