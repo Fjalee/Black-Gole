@@ -44,15 +44,6 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Shoot"",
-                    ""type"": ""Button"",
-                    ""id"": ""39764c40-062c-4594-bf0c-aea4c878961f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -99,28 +90,6 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
                     ""action"": ""TouchY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b41a04f6-1e2a-4356-bbdf-ada8289c9ce8"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""82740aa7-5351-4620-85fe-bf3db5009970"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -131,7 +100,6 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
         m_Basic = asset.FindActionMap("Basic", throwIfNotFound: true);
         m_Basic_TouchX = m_Basic.FindAction("TouchX", throwIfNotFound: true);
         m_Basic_TouchY = m_Basic.FindAction("TouchY", throwIfNotFound: true);
-        m_Basic_Shoot = m_Basic.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -193,14 +161,12 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
     private IBasicActions m_BasicActionsCallbackInterface;
     private readonly InputAction m_Basic_TouchX;
     private readonly InputAction m_Basic_TouchY;
-    private readonly InputAction m_Basic_Shoot;
     public struct BasicActions
     {
         private @PlanetControls m_Wrapper;
         public BasicActions(@PlanetControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @TouchX => m_Wrapper.m_Basic_TouchX;
         public InputAction @TouchY => m_Wrapper.m_Basic_TouchY;
-        public InputAction @Shoot => m_Wrapper.m_Basic_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Basic; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -216,9 +182,6 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
                 @TouchY.started -= m_Wrapper.m_BasicActionsCallbackInterface.OnTouchY;
                 @TouchY.performed -= m_Wrapper.m_BasicActionsCallbackInterface.OnTouchY;
                 @TouchY.canceled -= m_Wrapper.m_BasicActionsCallbackInterface.OnTouchY;
-                @Shoot.started -= m_Wrapper.m_BasicActionsCallbackInterface.OnShoot;
-                @Shoot.performed -= m_Wrapper.m_BasicActionsCallbackInterface.OnShoot;
-                @Shoot.canceled -= m_Wrapper.m_BasicActionsCallbackInterface.OnShoot;
             }
             m_Wrapper.m_BasicActionsCallbackInterface = instance;
             if (instance != null)
@@ -229,9 +192,6 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
                 @TouchY.started += instance.OnTouchY;
                 @TouchY.performed += instance.OnTouchY;
                 @TouchY.canceled += instance.OnTouchY;
-                @Shoot.started += instance.OnShoot;
-                @Shoot.performed += instance.OnShoot;
-                @Shoot.canceled += instance.OnShoot;
             }
         }
     }
@@ -240,6 +200,5 @@ public partial class @PlanetControls : IInputActionCollection2, IDisposable
     {
         void OnTouchX(InputAction.CallbackContext context);
         void OnTouchY(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
     }
 }
