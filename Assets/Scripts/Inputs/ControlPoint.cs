@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 
@@ -15,9 +16,12 @@ public class ControlPoint : MonoBehaviour
     private double? _chargeStartTime;
 
     private bool _isPlanetLaunched;
+
     private Vector2 _rotation = Vector2.zero;
 
     private int _smallestScreenDim;
+
+    private TextMeshProUGUI _speedText;
 
     private void Start()
     {
@@ -26,18 +30,25 @@ public class ControlPoint : MonoBehaviour
         _smallestScreenDim = Screen.currentResolution.height < Screen.currentResolution.width
             ? Screen.currentResolution.height
             : Screen.currentResolution.width;
+
+        _speedText = GameObject.FindGameObjectWithTag("SpeedText").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
     {
-        if(_planet == null)
+        if (_planet == null)
         {
             return;
         }
 
         transform.position = _planet.position;
 
-        if (!_isPlanetLaunched) _planet.velocity = Vector3.zero;
+        if (!_isPlanetLaunched)
+        {
+            _planet.velocity = Vector3.zero;
+        }
+        
+        UpdateSpeedText();
     }
 
     public void ReceiveTouchInput(Vector2 moveInput)
@@ -54,6 +65,11 @@ public class ControlPoint : MonoBehaviour
 
     private bool IsFingerOnPlanetBall(Vector2 touchPosition)
     {
+        if (Camera.main == null)
+        {
+            return false;
+        }
+
         var ray = Camera.main.ScreenPointToRay(touchPosition);
 
         return Physics.Raycast(ray, out var hit) && hit.collider.CompareTag("PlanetBall");
@@ -71,15 +87,39 @@ public class ControlPoint : MonoBehaviour
 
     public void OnFingerUp(Finger finger)
     {
-        if (_chargeStartTime == null || _isPlanetLaunched || !IsFingerOnPlanetBall(finger.screenPosition))
+        if (_chargeStartTime == null || !_planet || _isPlanetLaunched || !IsFingerOnPlanetBall(finger.screenPosition))
+        {
+            _chargeStartTime = null;
+
+            return;
+        }
+
+        _planet.velocity = transform.forward * CalculateSpeed(finger.currentTouch.time);
+        _isPlanetLaunched = true;
+        _chargeStartTime = null;
+    }
+
+    private float CalculateSpeed(double currentTime)
+    {
+        if (_chargeStartTime == null)
+        {
+            return 0;
+        }
+        
+        var chargeModifier = (float)(Math.Min(currentTime - (_chargeStartTime ?? 0), _maxChargeTime) / _maxChargeTime);
+
+        return _maxShootPower * chargeModifier;
+    }
+
+    private void UpdateSpeedText()
+    {
+        if (!_speedText)
         {
             return;
         }
 
-        var chargeModifier = (float)(Math.Min(finger.currentTouch.time - (_chargeStartTime ?? 0), _maxChargeTime) / _maxChargeTime);
-
-        _planet.velocity = transform.forward * _maxShootPower * chargeModifier;
-        _isPlanetLaunched = true;
-        _chargeStartTime = null;
+        var chargedSpeed = CalculateSpeed(Time.realtimeSinceStartupAsDouble);
+        
+        _speedText.text = chargedSpeed > 0 ? $"Launch speed: {chargedSpeed:F1} km/s" : "";
     }
 }
