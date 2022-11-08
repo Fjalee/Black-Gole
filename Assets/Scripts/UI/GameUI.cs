@@ -8,4 +8,9 @@ public class GameUI : MonoBehaviour
     {
         SceneLoader.Reload();
     }
+
+    public void BackToMenu()
+    {
+        SceneLoader.Load(SceneLoader.Scene.MainMenu);
+    }
 }
