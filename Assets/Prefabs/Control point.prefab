@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659459304414875210}
-  m_LocalRotation: {x: 0.06705857, y: -0.55637515, z: 0.04512574, w: 0.82699066}
+  m_LocalRotation: {x: 0.06705627, y: -0.55637574, z: 0.045123935, w: 0.8269906}
   m_LocalPosition: {x: 261.8583, y: 22.22071, z: -76.45659}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 3659459303991079174}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.272, y: -67.863, z: 0.001}
 --- !u!114 &3659459304414875209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _planet: {fileID: 0}
   _rotationSpeed: 8
-  _maxShootPower: 30
+  _maxShootPower: 65
+  _baseShootPower: 35
   _maxChargeTime: 3
 --- !u!114 &3659459304414875319
 MonoBehaviour:
@@ -122,8 +123,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3659459305199498411}
-  m_LocalRotation: {x: 0.067022525, y: 0.10932551, z: -0.025516303, w: 0.9914156}
-  m_LocalPosition: {x: -85.404724, y: 59.351418, z: 1.5854836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.38931796, y: 1.6800007, z: -10.220318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
