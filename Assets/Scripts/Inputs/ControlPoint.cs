@@ -11,13 +11,15 @@ public class ControlPoint : MonoBehaviour
 
     [SerializeField] private float _maxShootPower = 30f;
 
+    [SerializeField] private float _baseShootPower = 5f;
+
     [SerializeField] private double _maxChargeTime = 3f;
 
     private double? _chargeStartTime;
 
     private bool _isPlanetLaunched;
 
-    private Vector2 _rotation;
+    private Vector2 _rotation = Vector2.zero;
 
     private int _smallestScreenDim;
 
@@ -25,7 +27,6 @@ public class ControlPoint : MonoBehaviour
 
     private void Start()
     {
-        _rotation = new Vector2(gameObject.transform.rotation.x, gameObject.transform.rotation.y);
         _rotationSpeed = _rotationSpeed / 100000;
 
         _smallestScreenDim = Screen.currentResolution.height < Screen.currentResolution.width
@@ -109,7 +110,7 @@ public class ControlPoint : MonoBehaviour
 
         var chargeModifier = (float)(Math.Min(currentTime - (_chargeStartTime ?? 0), _maxChargeTime) / _maxChargeTime);
 
-        return _maxShootPower * chargeModifier;
+        return _baseShootPower + (_maxShootPower * chargeModifier);
     }
 
     private void UpdateSpeedText()

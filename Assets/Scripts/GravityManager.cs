@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GravityManager : MonoBehaviour
 {
-    //[SerializeField]
-    private float _pullRadiusFromCenter = 20000;    //20000 temporary, all object should be pulled
+    [SerializeField]
+    private float _pullRadiusFromCenter = 20;
 
     [SerializeField]
     private float _gravitationalConstant;
