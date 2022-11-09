@@ -1,43 +1,53 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rotatator : MonoBehaviour {
-	[SerializeField] Vector3 rotation;
-	[SerializeField] Transform meshObject = null;
-	[SerializeField] float rotationSpeed = 0;
-	[SerializeField] bool randomize;
-	
+	[SerializeField] 
+	private Vector3 _rotation;
+
+	[SerializeField] 
+	private Transform _meshObject = null;
+
+	[SerializeField] 
+	private float _rotationSpeed = 0;
+
+	[SerializeField] 
+	private bool _randomize;
+
+	[SerializeField]
+	private float _maxSpeed;
+
+	[SerializeField]
+	private float _minSpeed;
+
 	public bool Randomize 
-	
 	{
-		get {
-			return randomize;
+		get
+		{
+			return _randomize;
 		}
 	}
-	
-	[SerializeField] float maxSpeed;
-	[SerializeField] float minSpeed;
 
 	// Use this for initialization
-	void Start () {
-		if(randomize) {
-			rotation = new Vector3(RandFloat(), RandFloat(), RandFloat());
-			rotationSpeed = Random.Range(minSpeed,maxSpeed);
+	void Start ()
+	{
+		if (_randomize)
+		{
+			_rotation = new Vector3(RandFloat(), RandFloat(), RandFloat());
+			_rotationSpeed = Random.Range(_minSpeed, _maxSpeed);
 		}
 	}
 	
 	float RandFloat() 
-	
 	{
-		return Random.Range(0f,1.01f);
+		return Random.Range(0f, 1.01f);
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate() 
-	
 	{
-        if(meshObject != null)
-		    meshObject.Rotate(rotation, rotationSpeed * Time.deltaTime);
+        if(_meshObject != null)
+        {
+			_meshObject.Rotate(_rotation, _rotationSpeed * Time.deltaTime);
+		}
 	}
 }

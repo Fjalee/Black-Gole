@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894d5ffe8196d3c49904596070f794fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: {x: 5, y: 7, z: 8}
-  meshObject: {fileID: 555569946319352971}
-  rotationSpeed: 10
-  randomize: 1
-  maxSpeed: 20
-  minSpeed: 10
+  _rotation: {x: 5, y: 7, z: 8}
+  _meshObject: {fileID: 555569946319352971}
+  _rotationSpeed: 10
+  _randomize: 1
+  _maxSpeed: 20
+  _minSpeed: 10
