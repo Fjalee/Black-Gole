@@ -1,30 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GenerateAsteroidField : MonoBehaviour
 {
+    [SerializeField]
+    private Transform _asteroidPrefab;
 
-    public Transform asteroidPrefab;
-    public int fieldRadius = 100;
-    public int asteroidCount = 100;
-    public float scaleFromMultiplier = 0.5f;
-    public float scaleToMultiplier = 5;
+    [SerializeField]
+    private int _fieldRadius = 100;
+
+    [SerializeField]
+    private int _asteroidCount = 100;
+
+    [SerializeField]
+    private float _scaleFromMultiplier = 0.5f;
+
+    [SerializeField]
+    private float _scaleToMultiplier = 5;
+
+    [SerializeField]
+    private float _yAxisDivider = 3f;
 
     void Start()
     {
-
-        for (int i = 0; i < asteroidCount; i++)
+        for (int i = 0; i < _asteroidCount; i++)
         {
-            Transform temp = Instantiate(asteroidPrefab, this.transform.position + Random.insideUnitSphere * fieldRadius, Random.rotation, this.transform); 
-            temp.localScale = temp.localScale * Random.Range(scaleFromMultiplier, scaleToMultiplier);
+            Vector3 randomPosition = Random.insideUnitSphere;
+            randomPosition.y /= _yAxisDivider;
+
+            Transform temp = Instantiate(_asteroidPrefab, transform.position + randomPosition * _fieldRadius, Random.rotation, transform); 
+            temp.localScale = Vector3.one * Random.Range(_scaleFromMultiplier, _scaleToMultiplier);
         }
-
-    }
-
-    void Update()
-    {
 
     }
 }
