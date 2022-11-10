@@ -326,9 +326,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
         type: 3}
+      propertyPath: _fieldRadius
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
       propertyPath: asteroidCount
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
+      propertyPath: _asteroidCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
+      propertyPath: _asteroidPrefab
+      value: 
+      objectReference: {fileID: 6674827604741669315, guid: 6a8825e88c90bd141911e11479d7db20,
+        type: 3}
     - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
         type: 3}
       propertyPath: scaleToMultiplier
@@ -336,7 +352,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
         type: 3}
+      propertyPath: _scaleToMultiplier
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
       propertyPath: scaleFromMultiplier
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
+      propertyPath: _scaleFromMultiplier
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 9189337244705579403, guid: 259a97118fd44654db4cb252634fc18d,
