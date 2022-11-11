@@ -28,10 +28,10 @@ public class GenerateAsteroidField : MonoBehaviour
         Random.InitState(_seedForRandom);
         for (int i = 0; i < _asteroidCount; i++)
         {
-            Vector3 randomPosition = Random.insideUnitSphere;
+            var randomPosition = Random.insideUnitSphere;
             randomPosition.y /= _yAxisDivider;
 
-            Transform temp = Instantiate(_asteroidPrefab, transform.position + randomPosition * _fieldRadius, Random.rotation, transform); 
+            var temp = Instantiate(_asteroidPrefab, transform.position + randomPosition * _fieldRadius, Random.rotation, transform); 
             temp.localScale = Vector3.one * Random.Range(_scaleFromMultiplier, _scaleToMultiplier);
         }
 
