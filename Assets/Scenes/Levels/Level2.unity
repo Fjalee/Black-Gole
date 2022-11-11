@@ -337,7 +337,12 @@ PrefabInstance:
     - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
         type: 3}
       propertyPath: _asteroidCount
-      value: 30
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
+        type: 3}
+      propertyPath: _seedForRandom
+      value: 675
       objectReference: {fileID: 0}
     - target: {fileID: 5825326713484021044, guid: 259a97118fd44654db4cb252634fc18d,
         type: 3}

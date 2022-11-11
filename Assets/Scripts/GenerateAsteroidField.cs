@@ -20,8 +20,12 @@ public class GenerateAsteroidField : MonoBehaviour
     [SerializeField]
     private float _yAxisDivider = 3f;
 
+    [SerializeField]
+    private int _seedForRandom = 42;
+
     void Start()
     {
+        Random.InitState(_seedForRandom);
         for (int i = 0; i < _asteroidCount; i++)
         {
             Vector3 randomPosition = Random.insideUnitSphere;
