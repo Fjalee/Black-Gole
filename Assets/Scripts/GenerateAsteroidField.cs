@@ -34,6 +34,5 @@ public class GenerateAsteroidField : MonoBehaviour
             var temp = Instantiate(_asteroidPrefab, transform.position + randomPosition * _fieldRadius, Random.rotation, transform); 
             temp.localScale = Vector3.one * Random.Range(_scaleFromMultiplier, _scaleToMultiplier);
         }
-
     }
 }
