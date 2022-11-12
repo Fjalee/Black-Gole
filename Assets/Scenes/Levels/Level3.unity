@@ -555,7 +555,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 20000
-  field of view: 60
+  field of view: 56
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -580,8 +580,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776995003}
-  m_LocalRotation: {x: -0.2625862, y: -0.4271252, z: 0.13116421, w: -0.85522425}
-  m_LocalPosition: {x: -1734.4648, y: 2731.452, z: -884.056}
+  m_LocalRotation: {x: -0.5137347, y: 0.05809813, z: -0.034853708, w: -0.85526985}
+  m_LocalPosition: {x: 566.35315, y: 2314.1934, z: -379.52588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1091,6 +1091,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6195461755467524534, guid: 218f94e98d0019d4a8775f1a4868bef5,
+        type: 3}
+      propertyPath: _cameraObserveLevel
+      value: 
+      objectReference: {fileID: 776995006}
     - target: {fileID: 9177825824628476681, guid: 218f94e98d0019d4a8775f1a4868bef5,
         type: 3}
       propertyPath: m_RootOrder
