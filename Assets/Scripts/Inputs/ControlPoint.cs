@@ -9,11 +9,11 @@ public class ControlPoint : MonoBehaviour
 
     [SerializeField] private float _rotationSpeed = 8f;
 
-    [SerializeField] private float _maxShootPower = 30f;
+    [SerializeField] private float _maxShootPower = 200f;
 
     [SerializeField] private float _baseShootPower = 5f;
 
-    [SerializeField] private double _maxChargeTime = 3f;
+    [SerializeField] private double _maxChargeTime = 5f;
 
     private double? _chargeStartTime;
 
