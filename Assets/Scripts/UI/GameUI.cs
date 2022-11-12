@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
+    [SerializeField]
+    private Camera _cameraObserveLevel;
+
     public void RestartLevel()
     {
         SceneLoader.Reload();
@@ -14,6 +17,6 @@ public class GameUI : MonoBehaviour
 
     public void ObserveLevel()
     {
-
+        _cameraObserveLevel.enabled = !_cameraObserveLevel.isActiveAndEnabled;
     }
 }
