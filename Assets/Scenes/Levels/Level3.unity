@@ -660,10 +660,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1939711576, guid: 13c0b93076810834dabfaa5ddd14fd0d, type: 3}
+      propertyPath: _pullRadiusFromCenter
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2181829024891320424, guid: 13c0b93076810834dabfaa5ddd14fd0d,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181829024891320424, guid: 13c0b93076810834dabfaa5ddd14fd0d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181829024891320424, guid: 13c0b93076810834dabfaa5ddd14fd0d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181829024891320424, guid: 13c0b93076810834dabfaa5ddd14fd0d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 2181829024891320424, guid: 13c0b93076810834dabfaa5ddd14fd0d,
         type: 3}
