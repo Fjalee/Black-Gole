@@ -455,6 +455,21 @@ PrefabInstance:
       propertyPath: _planet
       value: 
       objectReference: {fileID: 1842948769}
+    - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+        type: 3}
+      propertyPath: _maxChargeTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+        type: 3}
+      propertyPath: _maxShootPower
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+        type: 3}
+      propertyPath: _baseShootPower
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3659459304414875210, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
         type: 3}
       propertyPath: m_Name
