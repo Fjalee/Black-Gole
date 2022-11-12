@@ -80,9 +80,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _planet: {fileID: 0}
   _rotationSpeed: 8
-  _maxShootPower: 65
-  _baseShootPower: 35
-  _maxChargeTime: 3
+  _maxShootPower: 200
+  _baseShootPower: 5
+  _maxChargeTime: 5
 --- !u!114 &3659459304414875319
 MonoBehaviour:
   m_ObjectHideFlags: 0
