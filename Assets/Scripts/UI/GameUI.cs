@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour
@@ -12,5 +10,10 @@ public class GameUI : MonoBehaviour
     public void BackToMenu()
     {
         SceneLoader.Load(SceneLoader.Scene.MainMenu);
+    }
+
+    public void ObserveLevel()
+    {
+
     }
 }
