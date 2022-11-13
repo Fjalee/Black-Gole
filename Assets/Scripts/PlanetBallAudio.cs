@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlanetBallAudio : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource _launchAudio;
+    private AudioSource _audioFlying;
 
     private Rigidbody _rigidBody;
 
@@ -12,11 +12,24 @@ public class PlanetBallAudio : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (_rigidBody.velocity != Vector3.zero && !_launchAudio.isPlaying)
+        UpdateFlyingAudio();
+    }
+
+    private void UpdateFlyingAudio()
+    {
+        float minPitch = 0.3f;
+        _audioFlying.pitch = 0.1f * minPitch * GetMaxElement(_rigidBody.velocity);
+
+        if (_rigidBody.velocity != Vector3.zero && !_audioFlying.isPlaying)
         {
-            _launchAudio.Play();
+            _audioFlying.Play();
         }
+    }
+
+    private float GetMaxElement(Vector3 vect)
+    {
+        return Mathf.Max(Mathf.Max(vect.x, vect.y), vect.z);
     }
 }
