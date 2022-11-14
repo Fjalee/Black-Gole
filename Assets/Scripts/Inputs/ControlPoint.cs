@@ -15,6 +15,8 @@ public class ControlPoint : MonoBehaviour
 
     [SerializeField] private double _maxChargeTime = 5f;
 
+    [SerializeField] private AudioSource _audioLaunch;
+
     private double? _chargeStartTime;
 
     private bool _isPlanetLaunched;
@@ -99,6 +101,7 @@ public class ControlPoint : MonoBehaviour
         _planet.velocity = transform.forward * CalculateSpeed(finger.currentTouch.time);
         _isPlanetLaunched = true;
         _chargeStartTime = null;
+        _audioLaunch.Play();
     }
 
     private float CalculateSpeed(double currentTime)
