@@ -13,8 +13,8 @@ public class BackgroundMusicManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
         PlayMainMusic();
 
-        var randInt = Random.Range(1, 10);
-        if (randInt == 10)
+        var randInt = Random.Range(1, 11);
+        if (randInt == 1)
         {
             PlayWhaleMusic();
         }
