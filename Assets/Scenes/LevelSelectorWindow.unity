@@ -2208,6 +2208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efbf160240c6f345b3a12e3fd2f0e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraObserveLevel: {fileID: 0}
+  _secondsToObserveLevelAtStart: 2
 --- !u!114 &1717409025
 MonoBehaviour:
   m_ObjectHideFlags: 0

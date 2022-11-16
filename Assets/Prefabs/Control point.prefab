@@ -83,6 +83,7 @@ MonoBehaviour:
   _maxShootPower: 200
   _baseShootPower: 5
   _maxChargeTime: 5
+  _audioLaunch: {fileID: 0}
 --- !u!114 &3659459304414875319
 MonoBehaviour:
   m_ObjectHideFlags: 0

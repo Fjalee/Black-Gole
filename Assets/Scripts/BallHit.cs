@@ -17,14 +17,7 @@ public class BallHit : MonoBehaviour
                 SceneLoader.LoadHeavy(_scene);
                 return;
             }
-
-            StartCoroutine(ReloadAfterSeconds(0.7f));
+            SceneLoader.Reload();
         }
-    }
-
-    private IEnumerator ReloadAfterSeconds(float secondsToWait)
-    {
-        yield return new WaitForSeconds(secondsToWait);
-        SceneLoader.Reload();
     }
 }
