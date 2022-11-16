@@ -388,6 +388,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c0b93076810834dabfaa5ddd14fd0d, type: 3}
+--- !u!20 &1599467037 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1844992371523444314, guid: 417614a988074c14b98dc5e008e66d4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 547181104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1842948769 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 555569946319352972, guid: b54cf1d01ce173c43b5892e5857cb3c4,
@@ -654,6 +660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6195461755467524534, guid: 218f94e98d0019d4a8775f1a4868bef5,
+        type: 3}
+      propertyPath: _cameraObserveLevel
+      value: 
+      objectReference: {fileID: 1599467037}
     - target: {fileID: 9177825824628476681, guid: 218f94e98d0019d4a8775f1a4868bef5,
         type: 3}
       propertyPath: m_RootOrder
