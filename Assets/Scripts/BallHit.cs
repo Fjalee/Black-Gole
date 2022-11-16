@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BallHit : MonoBehaviour
@@ -5,8 +6,10 @@ public class BallHit : MonoBehaviour
     [SerializeField]
     private SceneLoader.Scene _scene;
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        Destroy(other.gameObject);
+
         if (other.gameObject.tag == "PlanetBall")
         {
             if (gameObject.name == "BlackHole")
@@ -15,8 +18,13 @@ public class BallHit : MonoBehaviour
                 return;
             }
 
-            Destroy(other.gameObject);
-            SceneLoader.Reload();
+            StartCoroutine(ReloadAfterSeconds(0.7f));
         }
+    }
+
+    private IEnumerator ReloadAfterSeconds(float secondsToWait)
+    {
+        yield return new WaitForSeconds(secondsToWait);
+        SceneLoader.Reload();
     }
 }
