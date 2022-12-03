@@ -6,4 +6,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneLoader.Load(SceneLoader.Scene.LevelSelectorWindow);
     }
+
+    public void SelectCredits()
+    {
+        SceneLoader.Load(SceneLoader.Scene.Credits);
+    }
 }
