@@ -16,7 +16,6 @@ public class HyperLinkScript : MonoBehaviour, IPointerClickHandler
         linkMap.Add("Skyboxes", "https://assetstore.unity.com/packages/2d/textures-materials/deep-space-skybox-pack-11056");
         linkMap.Add("Asteroids", "https://assetstore.unity.com/packages/3d/environments/sci-fi/asteroids-low-poly-pack-142164");
         linkMap.Add("Asteroids_sound", "https://mixkit.co/free-sound-effects/asteroid/");
-
     }
 
 
