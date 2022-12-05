@@ -14,7 +14,8 @@ public static class SceneLoader
         Level3,
         MainMenu,
         LevelSelectorWindow,
-        Credits
+        Credits,
+        GameEnd
     }
 
     private static Action _onLoaderCallback;
