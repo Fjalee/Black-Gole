@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class BallHit : MonoBehaviour
@@ -15,7 +13,6 @@ public class BallHit : MonoBehaviour
         {
             if (gameObject.name == "BlackHole")
             {
-                Debug.Log(_scene.ToString());
                 SceneLoader.LoadHeavy(_scene);
                 return;
             }
