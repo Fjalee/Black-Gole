@@ -19,7 +19,8 @@ public class ControlPoint : MonoBehaviour
 
     private double? _chargeStartTime;
 
-    private bool _isPlanetLaunched;
+    [NonSerialized]
+    public bool IsPlanetLaunched;
 
     private Vector2 _rotation = Vector2.zero;
 
@@ -47,7 +48,7 @@ public class ControlPoint : MonoBehaviour
 
         transform.position = _planet.position;
 
-        if (!_isPlanetLaunched)
+        if (!IsPlanetLaunched)
         {
             _planet.velocity = Vector3.zero;
         }
@@ -81,7 +82,7 @@ public class ControlPoint : MonoBehaviour
 
     public void OnFingerDown(Finger finger)
     {
-        if (_isPlanetLaunched)
+        if (IsPlanetLaunched)
         {
             return;
         }
@@ -91,7 +92,7 @@ public class ControlPoint : MonoBehaviour
 
     public void OnFingerUp(Finger finger)
     {
-        if (_chargeStartTime == null || !_planet || _isPlanetLaunched || !IsFingerOnPlanetBall(finger.screenPosition))
+        if (_chargeStartTime == null || !_planet || IsPlanetLaunched || !IsFingerOnPlanetBall(finger.screenPosition))
         {
             _chargeStartTime = null;
 
@@ -99,7 +100,7 @@ public class ControlPoint : MonoBehaviour
         }
 
         _planet.velocity = transform.forward * CalculateSpeed(finger.currentTouch.time);
-        _isPlanetLaunched = true;
+        IsPlanetLaunched = true;
         _chargeStartTime = null;
         _audioLaunch.Play();
     }
