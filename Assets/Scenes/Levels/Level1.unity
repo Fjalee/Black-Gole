@@ -456,6 +456,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c0b93076810834dabfaa5ddd14fd0d, type: 3}
+--- !u!1001 &1597877298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647589, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413662258279647590, guid: 67abce32c87904646af27d4dd21c38ac,
+        type: 3}
+      propertyPath: m_Name
+      value: LastTrajectoryLine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 67abce32c87904646af27d4dd21c38ac, type: 3}
+--- !u!120 &1597877299 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 4413662258279647591, guid: 67abce32c87904646af27d4dd21c38ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1597877298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1599467037 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1844992371523444314, guid: 417614a988074c14b98dc5e008e66d4d,
@@ -465,6 +555,12 @@ Camera:
 --- !u!54 &1842948769 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 555569946319352972, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 555569947085266477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1842948772 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3333604414992808447, guid: b54cf1d01ce173c43b5892e5857cb3c4,
     type: 3}
   m_PrefabInstance: {fileID: 555569947085266477}
   m_PrefabAsset: {fileID: 0}
@@ -535,6 +631,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetBall
       objectReference: {fileID: 0}
+    - target: {fileID: 8108546420469617234, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+        type: 3}
+      propertyPath: _controlPoint
+      value: 
+      objectReference: {fileID: 3659459304930340920}
+    - target: {fileID: 8108546420469617234, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+        type: 3}
+      propertyPath: _trajectoryLine
+      value: 
+      objectReference: {fileID: 1597877299}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54cf1d01ce173c43b5892e5857cb3c4, type: 3}
 --- !u!1001 &3659459304930340919
@@ -606,6 +712,11 @@ PrefabInstance:
       objectReference: {fileID: 1842948769}
     - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
         type: 3}
+      propertyPath: _audioLaunch
+      value: 
+      objectReference: {fileID: 1842948772}
+    - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+        type: 3}
       propertyPath: _maxChargeTime
       value: 3
       objectReference: {fileID: 0}
@@ -621,6 +732,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0fc38d2dba791b4e89fe663da4b3dc4, type: 3}
+--- !u!114 &3659459304930340920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3659459304930340919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f942be5372dff7848b2ba90c14eebb7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4852334719356144738
 PrefabInstance:
   m_ObjectHideFlags: 0
