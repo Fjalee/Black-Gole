@@ -14,11 +14,23 @@ public static class SceneLoader
         Level3,
         MainMenu,
         LevelSelectorWindow,
+        TutorialLoading,
+        Tutorial,
         Credits,
         GameEnd
     }
 
     private static Action _onLoaderCallback;
+
+    public static void LoadTutorial(Scene scene)
+    {
+        _onLoaderCallback = () =>
+        {
+            SceneManager.LoadScene(scene.ToString());
+        };
+
+        SceneManager.LoadScene(SceneLoader.Scene.TutorialLoading.ToString());
+    }
 
     public static void LoadHeavy(Scene scene)
     {
