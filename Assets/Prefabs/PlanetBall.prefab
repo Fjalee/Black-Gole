@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8101636699821464067}
   - component: {fileID: 3333604414992808447}
   - component: {fileID: 7627786363689048130}
+  - component: {fileID: 8108546420469617234}
   m_Layer: 6
   m_Name: PlanetBall
   m_TagString: PlanetBall
@@ -248,3 +249,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioFlying: {fileID: 3333604414992808447}
+--- !u!114 &8108546420469617234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555569946319353010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2bf7c874519d34b969889ddebf73b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class BallHit : MonoBehaviour
@@ -16,6 +15,10 @@ public class BallHit : MonoBehaviour
             {
                 SceneLoader.LoadHeavy(_scene);
                 return;
+            }
+            if (gameObject.name.Contains("Star"))
+            {
+                DeathsCounter.instance.AddDeathByStar();
             }
             SceneLoader.Reload();
         }
