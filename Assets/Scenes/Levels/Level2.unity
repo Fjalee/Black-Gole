@@ -719,6 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 1842948769}
     - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
         type: 3}
+      propertyPath: _audioLaunch
+      value: 
+      objectReference: {fileID: 555569947085266478}
+    - target: {fileID: 3659459304414875209, guid: b0fc38d2dba791b4e89fe663da4b3dc4,
+        type: 3}
       propertyPath: _lastTrajectoryLine
       value: 
       objectReference: {fileID: 1790672417}
@@ -899,8 +904,24 @@ PrefabInstance:
       propertyPath: _trajectoryLine
       value: 
       objectReference: {fileID: 1790672417}
+    - target: {fileID: 8108546420469617234, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+        type: 3}
+      propertyPath: _controlPoint
+      value: 
+      objectReference: {fileID: 1661297480}
+    - target: {fileID: 8108546420469617234, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+        type: 3}
+      propertyPath: _trajectoryLine
+      value: 
+      objectReference: {fileID: 1790672417}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54cf1d01ce173c43b5892e5857cb3c4, type: 3}
+--- !u!82 &555569947085266478 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3333604414992808447, guid: b54cf1d01ce173c43b5892e5857cb3c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 555569947085266477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4413662256780670790
 PrefabInstance:
   m_ObjectHideFlags: 0
