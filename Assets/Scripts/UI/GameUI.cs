@@ -19,7 +19,10 @@ public class GameUI : MonoBehaviour
     public void RestartLevel()
     {
         // requires fix if needed, because it is assumed that when level ir restarted, death by space is added
-        DeathsCounter.instance.AddDeathBySpace();
+        if (DeathsCounter.instance)
+        {
+            DeathsCounter.instance.AddDeathBySpace();
+        }
         SceneLoader.Reload();
     }
 

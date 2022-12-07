@@ -20,12 +20,15 @@ namespace Inputs
 
         private void Start()
         {
-            LoadTrajectoryFromPlayerPrefs();
+            if (_trajectoryLine)
+            {
+                LoadTrajectoryFromPlayerPrefs();
+            }
         }
 
         private void Update()
         {
-            if (_controlPoint.IsPlanetLaunched)
+            if (_trajectoryLine && _controlPoint && _controlPoint.IsPlanetLaunched)
             {
                 _trajectoryPositions.Add(_planet.position);
             }
@@ -33,7 +36,10 @@ namespace Inputs
 
         private void OnDestroy()
         {
-            SaveTrajectoryToPlayerPrefs();
+            if (_trajectoryLine)
+            {
+                SaveTrajectoryToPlayerPrefs();
+            }
         }
 
         private void SaveTrajectoryToPlayerPrefs()
@@ -62,6 +68,11 @@ namespace Inputs
             _trajectoryLine.positionCount = trajectoryPositions.Count;
             _trajectoryLine.SetPositions(trajectoryPositions.ToArray());
             _trajectoryLine.gameObject.SetActive(true);
+        }
+
+        private void RemoveTrajectoryFromPlayerPrefs()
+        {
+            PlayerPrefs.DeleteKey($"trajectory_{SceneManager.GetActiveScene().name}");
         }
     }
 }

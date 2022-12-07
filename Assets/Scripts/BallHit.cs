@@ -14,9 +14,10 @@ public class BallHit : MonoBehaviour
             if (gameObject.name == "BlackHole")
             {
                 SceneLoader.LoadHeavy(_scene);
+                gameObject.GetComponent<>()
                 return;
             }
-            if (gameObject.name.Contains("Star"))
+            if (gameObject.name.Contains("Star") && DeathsCounter.instance)
             {
                 DeathsCounter.instance.AddDeathByStar();
             }
