@@ -16,7 +16,8 @@ public static class SceneLoader
         LevelSelectorWindow,
         TutorialLoading,
         Tutorial,
-        Credits
+        Credits,
+        GameEnd
     }
 
     private static Action _onLoaderCallback;
