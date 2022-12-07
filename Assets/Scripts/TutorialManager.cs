@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TutorialManager : MonoBehaviour
 {
     private GameObject[] _popUps;
-    private List<GameObject> activatedGOs;
+    private List<string> _activatedGOs;
     private Camera _cameraObserve;
     private GameObject _star;
     private GameObject _blackHole;
@@ -23,16 +23,23 @@ public class TutorialManager : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;
 
-        activatedGOs = new List<GameObject>();
+        _activatedGOs = new List<string>();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        _sceneLoadCounter++;
-        if (_sceneLoadCounter > 1)
+        if (scene.name == "LevelSelectorWindow")
         {
-            setupRefs();
-            activateGOs();
+            Destroy(transform.gameObject);
+        }
+        else
+        {
+            _sceneLoadCounter++;
+            if (_sceneLoadCounter > 1)
+            {
+                setupRefs();
+                activateGOs();
+            }
         }
     }
 
@@ -44,13 +51,13 @@ public class TutorialManager : MonoBehaviour
         _cameraObserve = GameObject.Find("CameraObserveLevel").GetComponent<Camera>();
 
         _star = GameObject.Find("Star");
-        _star.SetActive(false);
+        _star.SetActive(_activatedGOs.Contains("Star"));
         _blackHole = GameObject.Find("BlackHole");
-        _blackHole.SetActive(false);
+        _blackHole.SetActive(_activatedGOs.Contains("BlackHole"));
         _mapButton = GameObject.Find("Observe level");
-        _mapButton.SetActive(false);
+        _mapButton.SetActive(_activatedGOs.Contains("Observe level"));
         _restartButton = GameObject.Find("Restart Button");
-        _restartButton.SetActive(false);
+        _restartButton.SetActive(_activatedGOs.Contains("Restart Button"));
 
         GameObject popUpCanvas = GameObject.Find("PopUpCanvas");
         List<GameObject> popUps = new List<GameObject>();
@@ -63,11 +70,11 @@ public class TutorialManager : MonoBehaviour
 
     void activateGOs()
     {
-        foreach (GameObject go in activatedGOs)
-        {
-            //doesn't work, because you're trying to access objects that were destroyed when reloading scene
-            go.SetActive(true);
-        }
+        // foreach (GameObject go in _activatedGOs)
+        // {
+        //     //doesn't work, because you're trying to access objects that were destroyed when reloading scene
+        //     go.SetActive(true);
+        // }
     }
 
     void Update()
@@ -76,7 +83,6 @@ public class TutorialManager : MonoBehaviour
         {
             if (i == _popUpIndex)
             {
-                Debug.Log("true");
                 _popUps[i].SetActive(true);
             }
             else
@@ -99,18 +105,18 @@ public class TutorialManager : MonoBehaviour
         }
         else if (_popUpIndex == 2)
         {
-            //activate restart button
+            //activate restart button and ask to restart level
             _restartButton.SetActive(true);
-            activatedGOs.Add(_restartButton);
+            _activatedGOs.Add("Restart Button");
 
             if (_sceneLoadCounter > 2)
                 _popUpIndex++;
         }
         else if (_popUpIndex == 3)
         {
-            //activate star
+            //activate star and ask to launch ball
             _star.SetActive(true);
-            activatedGOs.Add(_star);
+            _activatedGOs.Add("Star");
 
             if (_planetBallRb.velocity != _tempVelocity)
                 _popUpIndex++;
@@ -119,28 +125,30 @@ public class TutorialManager : MonoBehaviour
         }
         else if (_popUpIndex == 4)
         {
-            //affected by gravity popup
+            //affected by gravity popup explanation
             if (_sceneLoadCounter > 3)
                 _popUpIndex++;
         }
         else if (_popUpIndex == 5)
         {
-            //activate map button
+            //activate map button and ask to press it
             _mapButton.SetActive(true);
-            activatedGOs.Add(_mapButton);
+            _activatedGOs.Add("Observe level");
 
             if (_cameraObserve.enabled)
                 _popUpIndex++;
         }
         else if (_popUpIndex == 6)
         {
+            //activate black hole and ask to come back to level
+            _blackHole.SetActive(true);
+            _activatedGOs.Add("BlackHole");
             if (!_cameraObserve.enabled)
                 _popUpIndex++;
         }
         else if (_popUpIndex == 7)
         {
-            //activate black hole
-            _blackHole.SetActive(true);
+            //prompt to get the PlanetBall into the BlackHole to finish tutorial
         }
     }
 }
