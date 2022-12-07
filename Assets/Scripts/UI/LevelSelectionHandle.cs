@@ -42,6 +42,11 @@ public class LevelSelectionHandle : MonoBehaviour
 
     public void OpenLevel(int indexFromOne)
     {
+        // resetting deaths counter
+        if (DeathsCounter.instance != null)
+        {
+            DeathsCounter.instance.ResetCounters();
+        }
         SceneLoader.LoadHeavy((SceneLoader.Scene)indexFromOne);
     }
 }
