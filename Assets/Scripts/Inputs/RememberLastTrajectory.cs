@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Helpers;
 using UnityEngine;
@@ -15,6 +16,9 @@ namespace Inputs
 
         [SerializeField]
         private Rigidbody _planet;
+
+        [NonSerialized]
+        public bool LevelCompleted = false; 
 
         private List<Vector3> _trajectoryPositions = new();
 
@@ -36,7 +40,16 @@ namespace Inputs
 
         private void OnDestroy()
         {
-            if (_trajectoryLine)
+            if (!_trajectoryLine)
+            {
+                return;
+            }
+
+            if (LevelCompleted)
+            {
+                RemoveCurrentLevelTrajectory();
+            }
+            else
             {
                 SaveTrajectoryToPlayerPrefs();
             }
@@ -44,7 +57,7 @@ namespace Inputs
 
         private void SaveTrajectoryToPlayerPrefs()
         {
-            if (!_controlPoint.IsPlanetLaunched)
+            if (!_controlPoint.IsPlanetLaunched && LevelCompleted)
             {
                 return;
             }
@@ -70,7 +83,7 @@ namespace Inputs
             _trajectoryLine.gameObject.SetActive(true);
         }
 
-        private void RemoveTrajectoryFromPlayerPrefs()
+        private void RemoveCurrentLevelTrajectory()
         {
             PlayerPrefs.DeleteKey($"trajectory_{SceneManager.GetActiveScene().name}");
         }
