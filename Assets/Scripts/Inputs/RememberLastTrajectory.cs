@@ -40,7 +40,7 @@ namespace Inputs
 
         private void OnDestroy()
         {
-            if (!_trajectoryLine)
+            if (!_trajectoryLine || !_controlPoint.IsPlanetLaunched)
             {
                 return;
             }
